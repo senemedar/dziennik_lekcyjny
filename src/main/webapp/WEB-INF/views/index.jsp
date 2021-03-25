@@ -26,8 +26,12 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- custom styles -->
+  <link rel="stylesheet" href="dist/css/customStyles.css">
   <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<%--  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">--%>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed" style="background-color: #fcf8e3">
@@ -38,7 +42,7 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-            <h1 class="m-0 mb-2 text-center text-warning text-xl text-bold">Interaktywny Dziennik Lekcyjny</h1>
+            <h1 class="m-0 mb-2 text-center text-warning title">Interaktywny Dziennik Lekcyjny</h1>
             <h5 class="text-center">Wybierz, aby rozpocząć:</h5>
 <!--        <div class="row mb-2">-->
 <!--          <div class="col-sm-6">-->
