@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TeacherController {
     @RequestMapping(value = {"/teacherRegistration"}, method = RequestMethod.GET)
     public String index() {
-        return "teacherRegistration";
+        return "static/teacherRegistration";
     }
 }

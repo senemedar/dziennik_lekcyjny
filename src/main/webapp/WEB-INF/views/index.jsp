@@ -43,7 +43,7 @@
               <div class="icon">
                 <i class="fas fa-user-graduate"></i>
               </div>
-              <a href="#" class="small-box-footer">Więcej informacji <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="teacherRegistration" class="small-box-footer">Zarejestruj nowego nauczyciela <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
