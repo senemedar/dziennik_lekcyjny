@@ -14,7 +14,7 @@ public class Student extends User {
     @ManyToOne
     private Classroom classroom;
 
-    @ManyToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "student")
     private List<Subject> subjectList;
 
 //    @JoinColumn(name = "parentId_fk")
