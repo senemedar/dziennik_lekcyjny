@@ -20,4 +20,12 @@ public class Teacher extends User {
         this.subjectList = subjectList;
         this.classroomList = classroomList;
     }
+
+    public List<Subject> getSubjectList() {
+        return subjectList;
+    }
+
+    public List<Classroom> getClassroomList() {
+        return classroomList;
+    }
 }

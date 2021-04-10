@@ -1,7 +1,12 @@
 package teamfp.dziennik.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
@@ -25,4 +30,6 @@ public class User {
         this.email = email;
         this.password = password;
     }
+
+
 }
