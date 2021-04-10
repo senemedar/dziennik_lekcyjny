@@ -11,7 +11,7 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToMany(mappedBy = "grade")
+    @ManyToMany(mappedBy = "subject")
     private Set<Grade> gradeList;
 
     @ManyToOne

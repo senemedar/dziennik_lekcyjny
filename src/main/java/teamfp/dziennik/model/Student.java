@@ -3,10 +3,7 @@ package teamfp.dziennik.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Setter
@@ -17,7 +14,7 @@ public class Student extends User {
     @ManyToOne
     private Classroom classroom;
 
-    @OneToMany(mappedBy = "subject")
+    @ManyToMany(mappedBy = "student")
     private List<Subject> subjectList;
 
 //    @JoinColumn(name = "parentId_fk")
