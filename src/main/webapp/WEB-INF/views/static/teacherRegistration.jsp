@@ -16,7 +16,7 @@
     <div class="content-header">
       <div class="container-fluid">
             <h1 class="m-0 mb-2 text-center text-warning title">Interaktywny Dziennik Lekcyjny</h1>
-            <h5 class="text-center">Wybierz, aby rozpocząć:</h5>
+            <h5 class="text-center">Wprowadź dane nauczyciela</h5>
 <!--        <div class="row mb-2">-->
 <!--          <div class="col-sm-6">-->
 <!--          </div>&lt;!&ndash; /.col &ndash;&gt;-->
@@ -31,52 +31,7 @@
 <!--      <div class="col-12">-->
         <!-- Small boxes (Stat box) -->
         <div class="row justify-content-center">
-          <div class="col-3">
-            <!-- small box -->
-            <div class="btn-info small-box">
-              <div class="inner">
-                <h5>Jestem</h5>
-                <h3>Nauczycielem</h3>
 
-                <p>&nbsp</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <a href="#" class="small-box-footer">Więcej informacji <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-3">
-            <!-- small box -->
-            <div class="small-box btn-danger">
-              <div class="inner">
-                <h5>Jestem</h5>
-                <h3>Uczniem</h3>
-
-                <p>&nbsp</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-chalkboard-teacher"></i>
-              </div>
-              <a href="#" class="small-box-footer">Więcej informacji <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-3">
-            <!-- small box -->
-            <div class="small-box btn-success">
-              <div class="inner">
-                <h5>Jestem</h5>
-                <h3>Rodzicem</h3>
-
-                <p>&nbsp</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-restroom"></i>
-              </div>
-              <a href="#" class="small-box-footer">Więcej informacji <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
           </div>
           <!-- ./col -->
         </div>
