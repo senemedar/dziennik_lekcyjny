@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <!DOCTYPE html>
@@ -17,9 +18,9 @@
 		<div class="card-body register-card-body">
 			<p class="login-box-msg">Zarejestruj nowego nauczyciela</p>
 			
-			<form action="#" method="post">
+			<form name="addTeacher" action='<c:url value="addNewTeacher" />' method="post">
 				<div class="input-group mb-3">
-					<input type="text" class="form-control" placeholder="Imię">
+					<input type="text" name="firstName" class="form-control" placeholder="Imię">
 					<div class="input-group-append">
 						<div class="input-group-text">
 							<span class="fas fa-user"></span>
@@ -28,7 +29,7 @@
 				</div>
 
 				<div class="input-group mb-3">
-					<input type="text" class="form-control" placeholder="Nazwisko">
+					<input type="text" name="lastName" class="form-control" placeholder="Nazwisko">
 					<div class="input-group-append">
 						<div class="input-group-text">
 							<span class="fas fa-users"></span>
@@ -37,7 +38,7 @@
 				</div>
 				
 				<div class="input-group mb-3">
-					<input type="email" class="form-control" placeholder="Email">
+					<input type="email" name="email" class="form-control" placeholder="Email">
 					<div class="input-group-append">
 						<div class="input-group-text">
 							<span class="fas fa-envelope"></span>
@@ -46,7 +47,7 @@
 				</div>
 				
 				<div class="input-group mb-3">
-					<input type="password" class="form-control" placeholder="Podaj Hasło">
+					<input type="password" name="password" class="form-control" placeholder="Podaj Hasło">
 					<div class="input-group-append">
 						<div class="input-group-text">
 							<span class="fas fa-lock"></span>
