@@ -7,55 +7,87 @@
     <title>Rejestracja nauczyciela</title>
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed" style="background-color: #fcf8e3">
-<div class="lockscreen-wrapper bg-secondary rounded-pill" style="max-width: 1000px;">
+<body class="hold-transition register-page" style="background-color: #fcf8e3">
+<div class="register-box">
+	<div class="register-logo">
+		<h1 class="text-secondary title">Interaktywny Dziennik Lekcyjny</h1>
+	</div>
+	
+	<div class="card">
+		<div class="card-body register-card-body">
+			<p class="login-box-msg">Zarejestruj nowego nauczyciela</p>
+			
+			<form action="#" method="post">
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="Imię">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+				</div>
 
-    <!-- Content Wrapper. Contains page content -->
-    <!--  <div class="content-wrapper">-->
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <h1 class="m-0 mb-2 text-center text-warning title">Interaktywny Dziennik Lekcyjny</h1>
-            <h5 class="text-center">Wprowadź dane nauczyciela</h5>
-            <!--        <div class="row mb-2">-->
-            <!--          <div class="col-sm-6">-->
-            <!--          </div>&lt;!&ndash; /.col &ndash;&gt;-->
-            <!--        </div>-->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <section class="content mb-5">
-        <div class="container-fluid col-xs-1">
-            <!--      <div class="col-12">-->
-            <!-- Small boxes (Stat box) -->
-            <div class="row justify-content-center">
-
-            </div>
-            <!-- ./col -->
-            <%--      </div>--%>
-            <!-- /.row -->
-
-            <!-- Main row -->
-
-
-            <!-- /.row (main row) -->
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="Nazwisko">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-users"></span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="input-group mb-3">
+					<input type="email" class="form-control" placeholder="Email">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-envelope"></span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="input-group mb-3">
+					<input type="password" class="form-control" placeholder="Podaj Hasło">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-lock"></span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="input-group mb-3">
+					<input type="password" class="form-control" placeholder="Powtórz hasło">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-lock"></span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+<%--					<div class="col-8">--%>
+<%--						<div class="icheck-primary">--%>
+<%--							<input type="checkbox" id="agreeTerms" name="terms" value="agree">--%>
+<%--							<label for="agreeTerms">--%>
+<%--								Zgadzam się na <a href="#">warunki</a>--%>
+<%--							</label>--%>
+<%--						</div>--%>
+<%--					</div>--%>
+					
+					<!-- /.col -->
+					<div class="col">
+						<button type="submit" class="btn btn-primary btn-block">zarejestruj mnie</button>
+					</div>
+					<!-- /.col -->
+				</div>
+			</form>
+			
+			<a href="#" class="text-center text-sm">Mam już członkostwo</a>
+		</div>
+		
+		<!-- /.form-box -->
+	</div><!-- /.card -->
 </div>
-<!-- /.content-wrapper -->
-<footer class="main-footer ml-0" style="background-color: #fcf8e3">
-    <span>Stworzone przez <strong>senemedar</strong>, <strong>pabd9009</strong>, <strong>William Wright</strong>, na podstawie <a
-            href="http://adminlte.io">AdminLTE.io</a>.</span>
-    <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 0.0.1
-    </div>
-</footer>
-
-</div>
-<!-- ./wrapper -->
+<!-- /.register-box -->
 
 <%@include file="../dynamic/endOfBody.jspf" %>
 

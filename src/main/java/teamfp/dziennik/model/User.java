@@ -16,17 +16,17 @@ public class User {
     private Long id;
 
     private String firstName;
-    private String surname;
+    private String lastName;
     private String email;
     private String password;
 
     public User() {
     }
 
-    public User(Long id, String firstName, String surname, String email, String password) {
+    public User(Long id, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.firstName = firstName;
-        this.surname = surname;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
     }

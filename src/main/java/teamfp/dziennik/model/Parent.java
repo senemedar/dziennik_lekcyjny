@@ -10,7 +10,7 @@ import java.util.Set;
 public class Parent extends User {
 
     @OneToMany(mappedBy = "parent")
-    @OrderBy("surname")
+    @OrderBy("lastName")
     private List<Student> studentList;
 
     public Parent() {
