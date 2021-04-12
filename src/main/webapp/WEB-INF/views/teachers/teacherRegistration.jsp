@@ -18,7 +18,7 @@
 		<div class="card-body register-card-body">
 			<p class="login-box-msg">Zarejestruj nowego nauczyciela</p>
 			
-			<form name="addTeacher" action='<c:url value="addNewTeacher" />' method="post">
+			<form name="addTeacher" action="addTeacher" method="post">
 				<div class="input-group mb-3">
 					<input type="text" name="firstName" class="form-control" placeholder="Imię">
 					<div class="input-group-append">

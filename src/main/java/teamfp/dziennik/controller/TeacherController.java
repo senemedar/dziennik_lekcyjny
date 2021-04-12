@@ -31,7 +31,7 @@ public class TeacherController {
 	public String getTeachersList(Model model) {
 		List<Teacher> teacherList = teacherRepository.findAll();
 		model.addAttribute("teacher", teacherList);
-		return "teachers/teachersList";
+		return "teachers/teacherList";
 	}
 
     @PostMapping(value = {"/addTeacher"})

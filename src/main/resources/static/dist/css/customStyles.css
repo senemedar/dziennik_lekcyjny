@@ -2,3 +2,18 @@ h1.title {
     font-family: 'Parisienne', cursive;
     font-size: 3rem;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.modal {
+    /*position: absolute;*/
+    top: 200px;
+    /*right: 100px;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*z-index: 10040;*/
+    /*overflow: auto;*/
+    /*overflow-y: auto;*/
+}
