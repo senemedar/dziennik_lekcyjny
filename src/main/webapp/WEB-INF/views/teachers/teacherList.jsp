@@ -13,8 +13,6 @@
 <body class="hold-transition sidebar-mini layout-fixed" style="background-color: #fcf8e3">
 <div class="lockscreen-wrapper bg-secondary p-2 rounded-lg" style="max-width: 1000px;">
 	
-	<!-- Content Wrapper. Contains page content -->
-	<!--  <div class="content-wrapper">-->
 	<!-- Content Header (Page header) -->
 	<div class="content-header">
 		<div class="container-fluid">
@@ -56,7 +54,7 @@
 							<div class="modal-header">
 								<h5 class="modal-title text-info">Zaloguj się jako użytkownik</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">X</span>
+									<span aria-hidden="true">x</span>
 								</button>
 							</div>
 							<div class="modal-body">
@@ -73,8 +71,8 @@
 							
 							</div>
 							<div class="modal-footer justify-content-between">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 								<button type="button" class="btn btn-primary" style="width: 300px">Zaloguj</button>
+								<button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
 							</div>
 						</div>
 						<!-- /.modal-content -->
@@ -97,10 +95,15 @@
 				<!-- /.info-box -->
 			</div>
 			<!-- /.col -->
-
-
 		</div>
 	</section>
+	
+	<section>
+		<div class="footer">
+			<button type="button" class="btn btn-warning px-4" onclick="location.href='/'"><i class="fas fa-arrow-circle-left mr-1"></i> Powrót</button>
+		</div>
+	</section>
+</div>
 	
 	<%@include file="../dynamic/endOfBody.jspf" %>
 
