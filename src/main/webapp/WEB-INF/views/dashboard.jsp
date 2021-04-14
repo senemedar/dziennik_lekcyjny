@@ -22,27 +22,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 	
 	<!-- Navbar at the top of the page and sidebar -->
-	<%@include file="dynamic/nav&sidebar.jsp"%>
+	<%@include file="dynamic/sidebar.jsp"%>
 	
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
-		<!-- Content Header (Page header) -->
-		<div class="content-header">
-			<div class="container-fluid">
-				<div class="row mb-2">
-					<div class="col-sm-6">
-						<h1 class="m-0 text-dark">Centrum dowodzenia</h1>
-					</div><!-- /.col -->
-					<div class="col-sm-6">
-						<ol class="breadcrumb float-sm-right">
-							<li class="breadcrumb-item"><a href="#">Centrum dowodzenia</a></li>
-							<!--              <li class="breadcrumb-item active">Starter Page</li>-->
-						</ol>
-					</div><!-- /.col -->
-				</div><!-- /.row -->
-			</div><!-- /.container-fluid -->
-		</div>
-		<!-- /.content-header -->
 		
 		<!-- Main content -->
 		<div class="content">
@@ -50,7 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				<div class="row">
 					<div class="col-lg-6">
 						<!-- column nr 1 -->
-						
+						<h4 class="my-3">Twoje klasy</h4>
 						<!-- Ta karta mogłaby pojawiać się, jeżeli nie ma klas ani uczniów -->
 						<div class="alert alert-info alert-dismissible p-0">
 							<div class="card-header">
@@ -75,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 					
 					<div class="col-lg-6">
 						<!-- column nr 2 -->
-					
+						<h4 class="my-3">Twoi uczniowie</h4>
 					</div>
 					<!-- /.col-lg-6 -->
 				</div>
