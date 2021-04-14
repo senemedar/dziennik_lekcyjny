@@ -32,9 +32,9 @@
 			<c:forEach items="${teacher}" var="t">
 				<div class="col-md-4 col-12">
 					<div class="info-box btn bg-info" data-toggle="modal" data-target="#user${t.id}">
-<%--						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#user${t.id}">--%>
-<%--							Launch Default Modal--%>
-<%--						</button>--%>
+							<%--						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#user${t.id}">--%>
+							<%--							Launch Default Modal--%>
+							<%--						</button>--%>
 						<span class="info-box-icon bg-white"><i class="fas fa-user-graduate text-secondary"></i></span>
 						
 						<div class="info-box-content text-light">
@@ -51,29 +51,33 @@
 				<div class="modal fade" id="user${t.id}">
 					<div class="modal-dialog">
 						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title text-info">Zaloguj się jako użytkownik</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">x</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<h3 class="modal-title text-info text-center">${t.firstName} ${t.lastName}</h3>
-								
-								<div class="input-group mb-3 mt-2">
-									<input type="password" name="password" class="form-control" placeholder="Podaj Hasło">
-									<div class="input-group-append">
-										<div class="input-group-text">
-											<span class="fas fa-lock"></span>
+							<form name="loginTeacher" action="loginTeacher" method="post">
+								<div class="modal-header">
+									<h5 class="modal-title text-info">Zaloguj się jako użytkownik</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">x</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<h3 class="modal-title text-info text-center">${t.firstName} ${t.lastName}</h3>
+									
+									<div class="input-group mb-3 mt-2">
+										<input type="password" name="password" class="form-control"
+											   placeholder="Podaj Hasło">
+										<div class="input-group-append">
+											<div class="input-group-text">
+												<span class="fas fa-lock"></span>
+											</div>
 										</div>
 									</div>
+								
 								</div>
-							
-							</div>
-							<div class="modal-footer justify-content-between">
-								<button type="button" class="btn btn-primary" style="width: 300px">Zaloguj</button>
-								<button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
-							</div>
+								<div class="modal-footer justify-content-between">
+									<button type="submit" class="btn btn-primary" style="width: 300px">Zaloguj</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+								</div>
+								<input hidden type="text" name="teacher_id" value="${t.id}">
+							</form>
 						</div>
 						<!-- /.modal-content -->
 					</div>
@@ -82,7 +86,7 @@
 				<!-- /.modal -->
 			
 			</c:forEach>
-
+			
 			<div class="col-md-4 col-12">
 				<div class="info-box btn btn-light" onclick="location.href='teacherRegistration'">
 					<span class="info-box-icon bg-secondary"><i class="fas fa-users"></i></span>
@@ -100,12 +104,14 @@
 	
 	<section>
 		<div class="footer">
-			<button type="button" class="btn btn-warning px-4" onclick="location.href='/'"><i class="fas fa-arrow-circle-left mr-1"></i> Powrót</button>
+			<button type="button" class="btn btn-warning px-4" onclick="location.href='/'"><i
+					class="fas fa-arrow-circle-left mr-1"></i> Powrót
+			</button>
 		</div>
 	</section>
 </div>
-	
-	<%@include file="../dynamic/endOfBody.jspf" %>
+
+<%@include file="../dynamic/endOfBody.jspf" %>
 
 </body>
 </html>
