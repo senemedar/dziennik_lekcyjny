@@ -4,7 +4,7 @@
 <html>
 <head>
 	<%@include file="dynamic/header.jspf" %>
-	<title>Rejestracja nauczyciela</title>
+	<title>Interaktywny dziennik lekcyjny</title>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed" style="background-color: #fcf8e3">
@@ -27,14 +27,15 @@
 	
 	<!-- Main content -->
 	<section class="content mb-5">
-		<div class="container-fluid col-xs-1">
+		<div class="container-fluid col-xs-1" onclick="location.href='teachers'">
 			<!--      <div class="col-12">-->
 			<!-- Small boxes (Stat box) -->
 			<div class="row justify-content-center">
 				<div class="col-3">
 					<!-- small box -->
 					<div class="btn-info small-box">
-						<div class="inner">
+<%--					<a href="teachers">--%>
+						<div class="inner cursor-pointer">
 							<h5>Jestem</h5>
 							<h3>Nauczycielem</h3>
 							
@@ -43,6 +44,7 @@
 						<div class="icon">
 							<i class="fas fa-user-graduate"></i>
 						</div>
+<%--					</a>--%>
 						<a href="teacherRegistration" class="small-box-footer">
 							Zarejestruj nowego nauczyciela <i class="fas fa-arrow-circle-right"></i>
 						</a>

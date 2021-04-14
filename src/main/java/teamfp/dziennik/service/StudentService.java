@@ -32,7 +32,7 @@ public class StudentService {
         Student editedStudent = new Student(
                 id,
                 student.getFirstName(),
-                student.getSurname(),
+                student.getLastName(),
                 student.getEmail(),
                 student.getPassword(),
                 student.getClassroom(),

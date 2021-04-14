@@ -32,7 +32,7 @@ public class TeacherService {
         Teacher editedTeacher = new Teacher(
                 id,
                 teacher.getFirstName(),
-                teacher.getSurname(),
+                teacher.getLastName(),
                 teacher.getEmail(),
                 teacher.getPassword(),
                 teacher.getSubjectList(),
