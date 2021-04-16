@@ -14,7 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
 <head>
-	<%@include file="dynamic/header.jspf" %>
+	<%@include file="../dynamic/header.jspf" %>
 	<title>Centrum dowodzenia</title>
 </head>
 
@@ -22,7 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 	
 	<!-- Navbar at the top of the page and sidebar -->
-	<%@include file="dynamic/sidebar.jsp"%>
+	<%@include file="../dynamic/sidebar.jsp"%>
 	
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
@@ -93,7 +93,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-<%@include file="dynamic/endOfBody.jspf" %>
+<%@include file="../dynamic/endOfBody.jspf" %>
 
 </body>
 </html>

@@ -15,7 +15,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 	<!-- Brand Logo -->
 	<a href="index3.html" class="brand-link bg-olive text-center">
-		<span class="brand-text">Michał Pielacha</span>
+		<span class="brand-text">${teacher.firstName} ${teacher.lastName}</span>
 	</a>
 	
 	<!-- Sidebar -->

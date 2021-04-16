@@ -41,5 +41,8 @@ public class TeacherService {
         teacherRepository.save(editedTeacher);
     }
 
+    public boolean loginTeacher(Long id, String password) {
+    	return this.getTeacher(id).getPassword().equals(password);
+	}
 
 }
