@@ -29,6 +29,30 @@
 	<!-- Main content -->
 	<section class="content mb-5">
 		<div class="row">
+			<!-- login credentials not correct -->
+			<c:if test="${credentials eq 'fail'}">
+				<div class="modal fade" id="cred-fail">
+					<div class="modal-dialog">
+						<div class="modal-content bg-danger">
+							<div class="modal-header">
+								<h5><i class="icon fas fa-ban"></i> Nieprawidłowe hasło!</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							</div>
+							<div class="modal-body">
+								<p class="mt-2">Podano nieprawidłowe hasło.<br>
+								Proszę spróbować ponownie.</p>
+							</div>
+							<div class="modal-footer justify-content-center bg-danger">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+							</div>
+						</div>
+						<!-- /.modal-content -->
+					</div>
+					<!-- /.modal-dialog -->
+				</div>
+				<!-- /.modal -->
+			</c:if>
+			
 			<c:forEach items="${teacher}" var="t">
 				<div class="col-md-4 col-12">
 					<div class="info-box btn bg-info" data-toggle="modal" data-target="#user${t.id}">
@@ -51,7 +75,8 @@
 				<div class="modal fade" id="user${t.id}">
 					<div class="modal-dialog">
 						<div class="modal-content">
-							<form name="loginTeacher" action="loginTeacher" method="post">
+							<form name="loginTeacher" action="${pageContext.request.contextPath}/loginTeacher"
+								  method="post">
 								<div class="modal-header">
 									<h5 class="modal-title text-info">Zaloguj się jako użytkownik</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -112,6 +137,16 @@
 </div>
 
 <%@include file="../dynamic/endOfBody.jspf" %>
+
+<c:if test="${credentials eq 'fail'}">
+	<script>
+        let myModal = new bootstrap.Modal(document.getElementById('cred-fail'), {
+            keyboard: false
+        })
+        myModal.toggle();
+	
+	</script>
+</c:if>
 
 </body>
 </html>

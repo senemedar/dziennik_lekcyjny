@@ -27,10 +27,14 @@ public class TeacherController {
 		return "teachers/teacherRegistration";
 	}
 
-	@GetMapping(value = "/teachers")
-	public String getTeachersList(Model model) {
+	@GetMapping(value = {"/teachers", "teachers/{credentials}"})
+	public String getTeachersList(Model model, @PathVariable(required = false) String credentials) {
 		List<Teacher> teacherList = teacherRepository.findAll();
+		if (credentials == null) {
+			credentials = "pass";
+		}
 		model.addAttribute("teacher", teacherList);
+		model.addAttribute("credentials");
 		return "teachers/teacherList";
 	}
 
@@ -45,14 +49,12 @@ public class TeacherController {
 	public RedirectView loginTeacher(
 			@RequestParam("teacher_id") Long id,
 			@RequestParam("password") String password
-			) {
-
-//		Teacher teacher = teacherService.getTeacher(id);
-//		System.out.println("Teacher from controller: " + teacher.getFirstName());
-//		System.out.println("Pass from controller: " + password);
-//		System.out.println("Pass from teacher: " + teacher.getPassword());
-		System.out.println(teacherService.loginTeacher(id, password));
-		return new RedirectView("dashboard/" + id);
+	) {
+		if (teacherService.loginTeacher(id, password)) {
+			return new RedirectView("dashboard/" + id);
+		} else {
+			return new RedirectView("teachers/fail"); // teachers
+		}
 	}
 
 	@GetMapping(value = {"/dashboard/{id}"})
