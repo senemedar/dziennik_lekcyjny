@@ -34,6 +34,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 					<div class="col-lg-6">
 						<!-- column nr 1 -->
 						<h4 class="my-3">Twoje klasy</h4>
+
+
 						<!-- Ta karta mogłaby pojawiać się, jeżeli nie ma klas ani uczniów -->
 						<div class="alert alert-info alert-dismissible p-0">
 							<div class="card-header">
@@ -44,7 +46,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 								</h4>
 							</div>
 							<div class="card-body">
-								
 								<p class="card-text">
 									Z poziomu tej strony możesz zarządzać swoim profilem.<br>
 									Nie masz jeszcze dodanych żadnych klas ani uczniów.

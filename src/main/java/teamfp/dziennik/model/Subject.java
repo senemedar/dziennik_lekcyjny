@@ -1,10 +1,16 @@
 package teamfp.dziennik.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import teamfp.dziennik.model.enums.SubjectName;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Subject {
     @Id
@@ -25,15 +31,4 @@ public class Subject {
 
     private SubjectName subjectName;
 
-    public Subject() {
-    }
-
-    public Subject(Long id, Set<Grade> gradeList, Student student, Teacher teacher, Attendance attendance, SubjectName subjectName) {
-        this.id = id;
-        this.gradeList = gradeList;
-        this.student = student;
-        this.teacher = teacher;
-        this.attendance = attendance;
-        this.subjectName = subjectName;
-    }
 }

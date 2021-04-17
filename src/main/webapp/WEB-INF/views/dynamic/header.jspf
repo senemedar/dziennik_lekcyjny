@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <!-- Tempusdominus Bbootstrap 4 -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<!-- Bootstrap4 Duallistbox -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
 <!-- iCheck -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 <!-- JQVMap -->
@@ -22,6 +24,9 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/summernote/summernote-bs4.css">
 <!-- custom styles -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/customStyles.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 <!-- Google Font: Source Sans Pro -->
 <%--  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">--%>
 <link rel="preconnect" href="https://fonts.gstatic.com">

@@ -1,13 +1,15 @@
 package teamfp.dziennik.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Setter
+@NoArgsConstructor
 @Getter
+@Setter
 @Entity
 public class Student extends User {
 
@@ -21,13 +23,13 @@ public class Student extends User {
     @ManyToOne
     private Parent parent;
 
-    public Student() {
-    }
-
-    public Student(Long id, String firstName, String surname, String email, String password, Classroom classroom, List<Subject> subjectList, Parent parent) {
-        super(id, firstName, surname, email, password);
-        this.classroom = classroom;
-        this.subjectList = subjectList;
-        this.parent = parent;
-    }
+	public Student(Long id,
+				   String firstName,
+				   String lastName,
+				   String email,
+				   String password,
+				   Classroom classroom,
+				   List<Subject> subjectList,
+				   Parent parent) {
+	}
 }

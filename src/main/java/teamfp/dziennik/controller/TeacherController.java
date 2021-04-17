@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 import teamfp.dziennik.model.Teacher;
 import teamfp.dziennik.repository.TeacherRepository;
+import teamfp.dziennik.service.ClassroomService;
 import teamfp.dziennik.service.TeacherService;
 
 import java.util.List;
@@ -14,12 +15,14 @@ import java.util.List;
 @Controller
 public class TeacherController {
 	private final TeacherService teacherService;
+	private final ClassroomService classroomService;
 
 	@Autowired
 	TeacherRepository teacherRepository;
 
-	public TeacherController(TeacherService teacherService) {
+	public TeacherController(TeacherService teacherService, ClassroomService classroomService) {
 		this.teacherService = teacherService;
+		this.classroomService = classroomService;
 	}
 
 	@GetMapping(value = {"/teacherRegistration"})
@@ -60,6 +63,9 @@ public class TeacherController {
 	@GetMapping(value = {"/dashboard/{id}"})
 	public String getTeacherById(Model model, @PathVariable String id) {
 		model.addAttribute("teacher", teacherService.getTeacher(Long.parseLong(id)));
+		model.addAttribute("teacherList", teacherService.getTeachersList());
+		model.addAttribute("classroomList", classroomService.getClassroomList());
+
 		return "teachers/dashboard";
 	}
 
