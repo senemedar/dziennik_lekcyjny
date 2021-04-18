@@ -19,6 +19,7 @@ public class Grade {
     private Long id;
 
     @ManyToOne
+//	@JoinColumn(name = "SUBJECT_ID", referencedColumnName = "ID")
     private Subject subject;
 
     private GradeValue gradeValue;

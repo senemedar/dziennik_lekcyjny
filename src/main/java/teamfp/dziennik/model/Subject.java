@@ -17,16 +17,18 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToMany(mappedBy = "subject")
+	@OneToMany(mappedBy = "subject")
     private Set<Grade> gradeList;
 
     @ManyToOne
+//	@JoinColumn(name = "STUDENT_ID", referencedColumnName = "ID")
     private Student student;
 
     @ManyToOne
+//	@JoinColumn(name = "TEACHER_ID", referencedColumnName = "ID")
     private Teacher teacher;
 
-    @OneToOne
+    @OneToOne(mappedBy = "subject")
     private Attendance attendance;
 
     private SubjectName subjectName;

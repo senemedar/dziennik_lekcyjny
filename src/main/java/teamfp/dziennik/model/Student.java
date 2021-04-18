@@ -14,13 +14,14 @@ import java.util.List;
 public class Student extends User {
 
     @ManyToOne
+//	@JoinColumn(name = "CLASSROOM_ID", referencedColumnName = "ID")
     private Classroom classroom;
 
     @OneToMany(mappedBy = "student")
     private List<Subject> subjectList;
 
-//    @JoinColumn(name = "parentId_fk")
     @ManyToOne
+//	@JoinColumn(name = "PARENT_ID", referencedColumnName = "ID")
     private Parent parent;
 
 	public Student(Long id,

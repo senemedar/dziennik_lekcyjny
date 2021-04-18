@@ -7,10 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!-- top navbar -->
-<%@include file="top-nav.jsp"%>
-<!-- /.navbar -->
-
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 	<!-- Brand Logo -->
@@ -46,14 +42,7 @@
 						</c:forEach>
 						
 						<li class="nav-item">
-							<a href="#" class="nav-link">
-								<i class="fas fa-plus-circle nav-icon"></i>
-								<p>Dodaj klasę</p>
-							</a>
-						</li>
-
-						<li class="nav-item">
-							<a href="#" class="nav-link">
+							<a href="/addClassroom/${teacher.id}" class="nav-link">
 								<i class="fas fa-plus-circle nav-icon"></i>
 								<p>Dodaj klasę</p>
 							</a>

@@ -14,10 +14,10 @@ import java.util.List;
 @Entity
 public class Teacher extends User {
 
-    @OneToMany
+    @OneToMany(mappedBy = "teacher")
     private List<Subject> subjectList;
 
-    @OneToMany
+    @OneToMany(mappedBy = "teacher")
     private List<Classroom> classroomList;
 
 	public Teacher(
@@ -30,11 +30,4 @@ public class Teacher extends User {
 			List<Classroom> classroomList) {
 	}
 
-	public List<Subject> getSubjectList() {
-        return subjectList;
-    }
-
-    public List<Classroom> getClassroomList() {
-        return classroomList;
-    }
 }

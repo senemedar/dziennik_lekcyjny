@@ -25,9 +25,6 @@ public class ClassroomController {
 	private final TeacherService teacherService;
 	private final StudentService studentService;
 
-	@Autowired
-	ClassroomRepository classroomRepository;
-
 	public ClassroomController(ClassroomService classroomService, TeacherService teacherService, StudentService studentService) {
 		this.classroomService = classroomService;
 		this.teacherService = teacherService;
@@ -50,7 +47,7 @@ public class ClassroomController {
 
 	@PostMapping(value = {"/addClassroom"})
 	public RedirectView postSaveClassroom(@ModelAttribute Classroom newClassroom) {
-		classroomRepository.save(newClassroom);
+		classroomService.saveClassroom(newClassroom);
 
 		return new RedirectView("/teachers");
 	}

@@ -18,6 +18,10 @@ public class ClassroomService {
 		return classroomRepository.findAll();
 	}
 
+	public void saveClassroom(Classroom newClassroom) {
+		classroomRepository.save(newClassroom);
+	}
+
 	//todo: nie zwracamy null-a
 	public Classroom getClassroom(Long id) {
 		return classroomRepository.findById(id).orElse(null);
@@ -28,14 +32,15 @@ public class ClassroomService {
 		classroomRepository.deleteById(id);
 	}
 
-	public void editClassroom(Classroom classroom, Long id) {
-		Classroom editedClassroom = new Classroom(
-				id,
-				classroom.getClassroomName(),
-				classroom.getStudentList(),
-				classroom.getClassroomTeacher()
-		);
-		classroomRepository.save(editedClassroom);
-	}
+//	public void editClassroom(Classroom classroom, Long id) {
+//		Classroom editedClassroom = new Classroom(
+//				id,
+//				classroom.getClassroomName(),
+//				classroom.getStudentList(),
+//				classroom.getTeacher()
+//		);
+//
+//		classroomRepository.save(editedClassroom);
+//	}
 
 }
