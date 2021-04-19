@@ -18,8 +18,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 	
-	<!-- Navbar at the top of the page and sidebar -->
+	<!-- Sidebar -->
 	<%@include file="../dynamic/sidebar.jsp" %>
+	
+	<!-- top navbar -->
+	<%@include file="../dynamic/top-nav.jsp"%>
 	
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
@@ -31,7 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 					<div class="col-lg-6">
 						
 						<!-- column nr 1 -->
-						<div class="card card-secondary mt-2">
+						<div class="card card-secondary mt-2 shadow">
 							<div class="card-header">
 								<h3 class="card-title">Tworzenie nowej klasy</h3>
 							</div>
@@ -95,8 +98,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 									</div>
 									<!-- ## selecting students -->
 									
-									<button type="submit" class="btn btn-primary btn-block">Utwórz nową klasę</button>
-								
+<%--									<button type="submit" class="btn btn-primary btn-block">Utwórz nową klasę</button>--%>
+									<div class="modal-footer justify-content-between">
+										<button type="submit" class="btn btn-primary" style="width: 300px">Zarejestruj klasę</button>
+										<button type="button" class="btn btn-default" onclick="location.href='javascript:history.back()'">Anuluj</button>
+									</div>
 								</form>
 							
 							
