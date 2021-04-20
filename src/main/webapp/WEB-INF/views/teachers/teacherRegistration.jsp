@@ -76,7 +76,7 @@
 					
 					<!-- /.col -->
 					<div class="col">
-						<button type="submit" class="btn btn-primary btn-block">zarejestruj mnie</button>
+						<button type="submit" class="btn btn-primary btn-block">Zarejestruj nauczyciela</button>
 					</div>
 					<!-- /.col -->
 				</div>

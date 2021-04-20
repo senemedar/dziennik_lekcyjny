@@ -7,5 +7,4 @@ import teamfp.dziennik.model.Parent;
 @Repository
 public interface ParentRepository extends JpaRepository<Parent, Long> {
 
-
 }

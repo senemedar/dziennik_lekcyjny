@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 import teamfp.dziennik.model.Teacher;
 import teamfp.dziennik.repository.TeacherRepository;
+import teamfp.dziennik.service.ClassroomService;
 import teamfp.dziennik.service.TeacherService;
 
 import java.util.List;
@@ -15,8 +16,8 @@ import java.util.List;
 public class TeacherController {
 	private final TeacherService teacherService;
 
-	@Autowired
-	TeacherRepository teacherRepository;
+//	@Autowired
+//	TeacherRepository teacherRepository;
 
 	public TeacherController(TeacherService teacherService) {
 		this.teacherService = teacherService;
@@ -29,7 +30,7 @@ public class TeacherController {
 
 	@GetMapping(value = {"/teachers", "teachers/{credentials}"})
 	public String getTeachersList(Model model, @PathVariable(required = false) String credentials) {
-		List<Teacher> teacherList = teacherRepository.findAll();
+		List<Teacher> teacherList = teacherService.getTeachersList();
 		if (credentials == null) {
 			credentials = "pass";
 		}
@@ -40,7 +41,7 @@ public class TeacherController {
 
 	@PostMapping(value = {"/addTeacher"})
 	public RedirectView postSaveTeacher(@ModelAttribute Teacher newTeacher) {
-		teacherRepository.save(newTeacher);
+		teacherService.saveTeacher(newTeacher);
 
 		return new RedirectView("/teachers");
 	}
@@ -55,12 +56,6 @@ public class TeacherController {
 		} else {
 			return new RedirectView("teachers/fail"); // teachers
 		}
-	}
-
-	@GetMapping(value = {"/dashboard/{id}"})
-	public String getTeacherById(Model model, @PathVariable String id) {
-		model.addAttribute("teacher", teacherService.getTeacher(Long.parseLong(id)));
-		return "teachers/dashboard";
 	}
 
 }

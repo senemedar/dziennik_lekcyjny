@@ -28,18 +28,22 @@ public class TeacherService {
         teacherRepository.deleteById(id);
     }
 
-    public void editTeacher(Teacher teacher, Long id) {
-        Teacher editedTeacher = new Teacher(
-                id,
-                teacher.getFirstName(),
-                teacher.getLastName(),
-                teacher.getEmail(),
-                teacher.getPassword(),
-                teacher.getSubjectList(),
-                teacher.getClassroomList()
-        );
-        teacherRepository.save(editedTeacher);
-    }
+    public void saveTeacher(Teacher teacher) {
+    	teacherRepository.save(teacher);
+	}
+
+//    public void editTeacher(Teacher teacher, Long id) {
+//        Teacher editedTeacher = new Teacher(
+//                id,
+//                teacher.getFirstName(),
+//                teacher.getLastName(),
+//                teacher.getEmail(),
+//                teacher.getPassword(),
+//                teacher.getSubjectList(),
+//                teacher.getClassroomList()
+//        );
+//        teacherRepository.save(editedTeacher);
+//    }
 
     public boolean loginTeacher(Long id, String password) {
     	return this.getTeacher(id).getPassword().equals(password);

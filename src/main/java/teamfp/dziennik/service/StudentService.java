@@ -28,18 +28,18 @@ public class StudentService {
         studentRepository.deleteById(id);
     }
 
-    public void editStudent(Student student, Long id) {
-        Student editedStudent = new Student(
-                id,
-                student.getFirstName(),
-                student.getLastName(),
-                student.getEmail(),
-                student.getPassword(),
-                student.getClassroom(),
-                student.getSubjectList(),
-                student.getParent()
-        );
-        studentRepository.save(editedStudent);
-    }
+//    public void editStudent(Student student, Long id) {
+//        Student editedStudent = new Student(
+//                id,
+//                student.getFirstName(),
+//                student.getLastName(),
+//                student.getEmail(),
+//                student.getPassword(),
+//                student.getClassroom(),
+//                student.getSubjectList(),
+//                student.getParent()
+//        );
+//        studentRepository.save(editedStudent);
+//    }
 
 }

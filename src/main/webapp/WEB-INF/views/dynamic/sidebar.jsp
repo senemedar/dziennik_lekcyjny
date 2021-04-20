@@ -7,10 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!-- top navbar -->
-<%@include file="top-nav.jsp"%>
-<!-- /.navbar -->
-
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 	<!-- Brand Logo -->
@@ -25,8 +21,8 @@
 		<!-- Sidebar Menu (on the left) -->
 		<nav class="mt-2">
 			<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
-				<!-- Add icons to the links using the .nav-icon class
-					 with font-awesome or any other icon font library -->
+
+<!-- List of classrooms -->
 				<li class="nav-item has-treeview mt-2">
 					<a href="#" class="nav-link bg-secondary">
 						<i class="nav-icon fas fa-user-graduate"></i>
@@ -36,8 +32,17 @@
 						</p>
 					</a>
 					<ul class="nav nav-treeview">
+						<c:forEach items="classroomList" var="classroom">
 						<li class="nav-item">
 							<a href="#" class="nav-link">
+<%--								<i class="fas fa-plus-circle nav-icon"></i>--%>
+								<p>classroom.classroomName</p>
+							</a>
+						</li>
+						</c:forEach>
+						
+						<li class="nav-item">
+							<a href="/addClassroom/${teacher.id}" class="nav-link">
 								<i class="fas fa-plus-circle nav-icon"></i>
 								<p>Dodaj klasę</p>
 							</a>

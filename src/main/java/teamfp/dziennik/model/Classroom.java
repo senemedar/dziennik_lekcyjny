@@ -1,8 +1,17 @@
 package teamfp.dziennik.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Classroom {
 
@@ -12,9 +21,16 @@ public class Classroom {
 
     private String classroomName;
 
-    @OneToMany
+    @OneToMany(mappedBy = "classroom")
     private List<Student> studentList;
 
     @ManyToOne
-    private Teacher classroomTeacher;
+//	@JoinColumn(name = "TEACHER_ID", referencedColumnName = "ID")
+    private Teacher teacher;
+
+	public Classroom(Long id,
+					 String classroomName,
+					 List<Student> studentList,
+					 Teacher teacher) {
+	}
 }

@@ -1,39 +1,36 @@
 package teamfp.dziennik.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import teamfp.dziennik.model.enums.SubjectName;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToMany(mappedBy = "subject")
+	@OneToMany(mappedBy = "subject")
     private Set<Grade> gradeList;
 
     @ManyToOne
+//	@JoinColumn(name = "STUDENT_ID", referencedColumnName = "ID")
     private Student student;
 
     @ManyToOne
+//	@JoinColumn(name = "TEACHER_ID", referencedColumnName = "ID")
     private Teacher teacher;
 
-    @OneToOne
+    @OneToOne(mappedBy = "subject")
     private Attendance attendance;
 
     private SubjectName subjectName;
 
-    public Subject() {
-    }
-
-    public Subject(Long id, Set<Grade> gradeList, Student student, Teacher teacher, Attendance attendance, SubjectName subjectName) {
-        this.id = id;
-        this.gradeList = gradeList;
-        this.student = student;
-        this.teacher = teacher;
-        this.attendance = attendance;
-        this.subjectName = subjectName;
-    }
 }
