@@ -10,10 +10,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
+
 <html lang="en">
 <head>
 	<%@include file="../dynamic/header.jspf" %>
@@ -83,7 +80,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 						</a>
 						<ul class="nav nav-treeview">
 							<li class="nav-item">
-								<a href="#" class="nav-link">
+								<a href="/addStudent/${teacher.id}" class="nav-link">
 									<i class="fas fa-plus-circle nav-icon"></i>
 									<p>Dodaj ucznia</p>
 								</a>

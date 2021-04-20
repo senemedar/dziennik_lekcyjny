@@ -20,10 +20,9 @@ public class DashboardController {
 		this.studentService = studentService;
 	}
 
-
-	@GetMapping(value = {"/dashboard/{id}"})
-	public String getTeacherById(Model model, @PathVariable String id) {
-		model.addAttribute("teacher", teacherService.getTeacher(Long.parseLong(id)));
+	@GetMapping(value = {"/dashboard/{teacherId}"})
+	public String getTeacherById(Model model, @PathVariable String teacherId) {
+		model.addAttribute("teacher", teacherService.getTeacher(Long.parseLong(teacherId)));
 		model.addAttribute("teacherList", teacherService.getTeachersList());
 		model.addAttribute("classroomList", classroomService.getClassroomList());
 		model.addAttribute("studentList", studentService.getStudentsList());
