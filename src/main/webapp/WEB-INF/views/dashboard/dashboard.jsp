@@ -23,7 +23,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 	<!-- top navbar -->
-	<%@include file="../dynamic/top-nav.jsp"%>
+	<%@include file="top-nav.jsp"%>
 	<!-- /.navbar -->
 	
 	<!-- Navbar at the top of the page and sidebar -->

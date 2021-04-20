@@ -28,7 +28,7 @@ public class DashboardController {
 		model.addAttribute("classroomList", classroomService.getClassroomList());
 		model.addAttribute("studentList", studentService.getStudentsList());
 
-		return "teachers/dashboard";
+		return "dashboard/dashboard";
 	}
 
 }

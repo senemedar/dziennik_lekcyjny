@@ -19,10 +19,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 	
 	<!-- Sidebar -->
-	<%@include file="../dynamic/sidebar.jsp" %>
+	<%@include file="../dashboard/sidebar.jsp" %>
 	
 	<!-- top navbar -->
-	<%@include file="../dynamic/top-nav.jsp"%>
+	<%@include file="../dashboard/top-nav.jsp"%>
 	
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
