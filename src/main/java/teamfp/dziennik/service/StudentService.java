@@ -5,6 +5,7 @@ import teamfp.dziennik.model.Student;
 import teamfp.dziennik.repository.StudentRepository;
 
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class StudentService {
@@ -27,6 +28,17 @@ public class StudentService {
     public void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
+
+    public String generatePassword(int passwordLength) {
+		String letters = "abcdefghijklmnopqrstuvw";
+
+		StringBuilder pass = new StringBuilder();
+		for (int i = 0; i < passwordLength; i++) {
+			pass.append(letters.charAt(new Random().nextInt(letters.length())));
+		}
+
+		return pass.toString();
+	}
 
 //    public void editStudent(Student student, Long id) {
 //        Student editedStudent = new Student(

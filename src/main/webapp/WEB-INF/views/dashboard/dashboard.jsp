@@ -11,7 +11,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pl">
 <head>
 	<%@include file="../dynamic/header.jspf" %>
 	<title>Centrum dowodzenia</title>
@@ -20,124 +20,10 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 	<!-- top navbar -->
-	<%@include file="top-nav.jsp"%>
-	<!-- /.navbar -->
+	<%@include file="top-nav.jspf" %>
 	
 	<!-- Navbar at the top of the page and sidebar -->
-<%--	<%@include file="../dynamic/sidebar.jsp"%>--%>
-	
-	<!-- Main Sidebar Container -->
-	<aside class="main-sidebar sidebar-dark-primary elevation-4">
-		<!-- Brand Logo -->
-		<a href="index3.html" class="brand-link bg-olive text-center">
-			<i class="nav-icon fas fa-chalkboard-teacher"></i>
-			<span class="brand-text ml-1">${teacher.firstName} ${teacher.lastName}</span>
-		</a>
-		
-		<!-- Sidebar -->
-		<div class="sidebar">
-			<!-- Sidebar user panel (optional) -->
-			
-			<!-- Sidebar Menu (on the left) -->
-			<nav class="mt-2">
-				<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
-					
-					<!-- List of classrooms -->
-					<li class="nav-item has-treeview mt-2">
-						<a href="#" class="nav-link bg-secondary">
-							<i class="nav-icon fas fa-chalkboard"></i>
-							<p>
-								Twoje klasy
-								<i class="right fas fa-angle-left"></i>
-							</p>
-						</a>
-						<ul class="nav nav-treeview">
-							<c:forEach items="${classroomList}" var="classRoom">
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fas fa-minus nav-icon"></i>
-										<p>${classRoom.classroomName}</p>
-									</a>
-								</li>
-							</c:forEach>
-							
-							<li class="nav-item">
-								<a href="/addClassroom/${teacher.id}" class="nav-link">
-									<i class="fas fa-plus-circle nav-icon"></i>
-									<p>Dodaj klasę</p>
-								</a>
-							</li>
-						</ul>
-					</li>
-					
-					<li class="nav-item has-treeview mt-2">
-						<a href="#" class="nav-link bg-danger">
-							<i class="nav-icon fas fa-user-graduate"></i>
-							<p>
-								Twoi uczniowie
-								<i class="right fas fa-angle-left"></i>
-							</p>
-						</a>
-						<ul class="nav nav-treeview">
-							<li class="nav-item">
-								<a href="/addStudent/${teacher.id}" class="nav-link">
-									<i class="fas fa-plus-circle nav-icon"></i>
-									<p>Dodaj ucznia</p>
-								</a>
-							</li>
-						</ul>
-					</li>
-					
-					<li class="nav-item has-treeview mt-2">
-						<a href="#" class="nav-link bg-warning">
-							<i class="nav-icon fas fa-list text-white"></i>
-							<p>
-								Twoje przedmioty
-								<i class="right fas fa-angle-left"></i>
-							</p>
-						</a>
-						<ul class="nav nav-treeview">
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<i class="fas fa-plus-circle nav-icon"></i>
-									<p>Dodaj przedmiot</p>
-								</a>
-							</li>
-						</ul>
-					</li>
-					
-					<li class="nav-item bg-success rounded mt-2">
-						<a href="#" class="nav-link">
-							<i class="nav-icon fas fa-star-half-alt"></i>
-							<p>Oceny</p>
-						</a>
-					</li>
-					
-					<li class="nav-item bg-indigo rounded mt-2">
-						<a href="#" class="nav-link">
-							<i class="nav-icon fas fa-calendar-alt"></i>
-							<p>Kalendarz</p>
-						</a>
-					</li>
-					
-					<!--
-							  <li class="nav-item">
-								<a href="#" class="nav-link">
-								  <i class="nav-icon fas fa-th"></i>
-								  <p>
-									Simple Link
-									<span class="right badge badge-danger">New</span>
-								  </p>
-								</a>
-							  </li>
-					-->
-				
-				</ul>
-			</nav>
-			<!-- /.sidebar-menu -->
-		</div>
-		<!-- /.sidebar -->
-	</aside>
+	<%@include file="sidebar.jspf" %>
 	
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
@@ -153,13 +39,13 @@
 							<i class="nav-icon fas fa-chalkboard"></i>
 							Twoje klasy
 						</h4>
-
+						
 						<c:choose>
 							<c:when test="${empty classroomList}">
-								<!-- Ta karta mogłaby pojawiać się, jeżeli nie ma klas ani uczniów -->
 								<div class="alert alert-info alert-dismissible p-0 shadow">
 									<div class="card-header">
-										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
+										</button>
 										<h4 class="m-0">
 											<i class="nav-icon fas fa-info-circle"></i>
 											Informacja
@@ -168,7 +54,8 @@
 									<div class="card-body">
 										<p class="card-text">
 											Nie masz jeszcze dodanych żadnych klas.<br>
-											Wybierz czynność z rozwijanego menu po lewej stronie, aby dodać i skonfigurować klasę.
+											Wybierz czynność z rozwijanego menu po lewej stronie, aby dodać i
+											skonfigurować klasę.
 										</p>
 									</div>
 								</div>
@@ -183,7 +70,8 @@
 											</h3>
 											
 											<div class="card-tools">
-												<button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+												<button type="button" class="btn btn-tool" data-card-widget="collapse">
+													<i class="fas fa-plus"></i>
 												</button>
 											</div>
 											<!-- /.card-tools -->
@@ -215,7 +103,8 @@
 								<!-- Ta karta mogłaby pojawiać się, jeżeli nie ma klas ani uczniów -->
 								<div class="alert alert-info alert-dismissible p-0 shadow">
 									<div class="card-header">
-										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
+										</button>
 										<h4 class="m-0">
 											<i class="nav-icon fas fa-info-circle"></i>
 											Informacja
@@ -224,7 +113,8 @@
 									<div class="card-body">
 										<p class="card-text">
 											Nie masz jeszcze dodanych żadnych uczniów.<br>
-											Wybierz czynność z rozwijanego menu po lewej stronie, aby dodać i skonfigurować uczniów.
+											Wybierz czynność z rozwijanego menu po lewej stronie, aby dodać i
+											skonfigurować uczniów.
 										</p>
 									</div>
 								</div>
@@ -234,12 +124,13 @@
 									<div class="card card-secondary collapsed-card shadow">
 										<div class="card-header">
 											<h3 class="card-title">
-												
-												${student.firstName} ${student.lastName}
+													
+													${student.firstName} ${student.lastName}
 											</h3>
 											
 											<div class="card-tools">
-												<button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+												<button type="button" class="btn btn-tool" data-card-widget="collapse">
+													<i class="fas fa-plus"></i>
 												</button>
 											</div>
 											<!-- /.card-tools -->
@@ -254,7 +145,6 @@
 								</c:forEach>
 							</c:otherwise>
 						</c:choose>
-					
 					
 					
 					</div>

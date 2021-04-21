@@ -13,10 +13,10 @@
 <div class="wrapper">
 	
 	<!-- Sidebar -->
-	<%@include file="../dashboard/sidebar.jsp" %>
+	<%@include file="../dashboard/sidebar.jspf" %>
 	
 	<!-- top navbar -->
-	<%@include file="../dashboard/top-nav.jsp"%>
+	<%@include file="../dashboard/top-nav.jspf"%>
 	
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
@@ -48,20 +48,6 @@
 										<label>Nauczyciel przypisany do klasy</label>
 										<input type="text" name="classroomTeacher" class="form-control"
 											   disabled value="${teacher.firstName} ${teacher.lastName}">
-										<%--									<select class="form-control select2bs4" style="width: 100%;">--%>
-										<%--											<c:forEach items="${teacherList}" var="tl">--%>
-										<%--												<c:choose>--%>
-										<%--													<c:when test="${tl.firstName == teacher.firstName && tl.lastName == teacher.lastName}">--%>
-										<%--														<option selected="selected">--%>
-										<%--													</c:when>--%>
-										<%--													<c:otherwise>--%>
-										<%--														<option>--%>
-										<%--													</c:otherwise>--%>
-										<%--												</c:choose>--%>
-										<%--												${tl.firstName} ${tl.lastName}--%>
-										<%--												</option>--%>
-										<%--											</c:forEach>--%>
-										<%--									</select>--%>
 									</div>
 									<!-- /.form-group ## choosing a teacher-->
 									

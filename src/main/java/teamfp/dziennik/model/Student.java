@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Random;
 
 @NoArgsConstructor
 @Getter
@@ -33,4 +34,5 @@ public class Student extends User {
 				   List<Subject> subjectList,
 				   Parent parent) {
 	}
+
 }
