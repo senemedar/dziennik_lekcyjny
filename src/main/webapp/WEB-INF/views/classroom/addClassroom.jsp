@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@
 							</div>
 							
 							<div class="card-body">
-								<form id="addClassroom" action="${pageContext.request.contextPath}/addClassroom" method="post">
+								<form id="addClassroom" action="${pageContext.request.contextPath}/addClassroom/${teacher.id}" method="post">
 									
 									<!-- entering class name -->
 									<div class="form-group pb-2">

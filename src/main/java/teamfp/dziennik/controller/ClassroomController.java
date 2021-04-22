@@ -45,11 +45,11 @@ public class ClassroomController {
 		return "classroom/addClassroom";
 	}
 
-	@PostMapping(value = {"/addClassroom"})
-	public RedirectView postSaveClassroom(@ModelAttribute Classroom newClassroom) {
+	@PostMapping(value = {"/addClassroom/{id}"})
+	public RedirectView postSaveClassroom(@ModelAttribute Classroom newClassroom, @PathVariable String id) {
 		classroomService.saveClassroom(newClassroom);
 
-		return new RedirectView("/teachers");
+		return new RedirectView("/dashboard/" + id);
 	}
 
 }
