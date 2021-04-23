@@ -8,8 +8,6 @@ import teamfp.dziennik.service.ClassroomService;
 import teamfp.dziennik.service.StudentService;
 import teamfp.dziennik.service.TeacherService;
 
-import java.util.ArrayList;
-
 @Controller
 public class StudentController {
 	private final StudentService studentService;
@@ -26,7 +24,7 @@ public class StudentController {
 	@GetMapping(value = {"/addStudent/{teacherId}"})
 	public String registerNewTeacher(Model model, @PathVariable String teacherId) {
 		model.addAttribute("teacher", teacherService.getTeacher(Long.parseLong(teacherId)));
-		model.addAttribute("studentList", studentService.getStudentsList());
+		model.addAttribute("studentList", studentService.getStudentList());
 		model.addAttribute("classroomList", classroomService.getClassroomList());
 //		model.addAttribute("classroomList", new ArrayList<>());
 		model.addAttribute("password", studentService.generatePassword(5));

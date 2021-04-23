@@ -1,0 +1,71 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: senemedar
+  Date: 22/04/2021
+  Time: 23:12
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
+<div class="card card-danger shadow mt-2">
+	<div class="card-header">
+		<h4>
+			<i class="nav-icon fas fa-user-graduate"></i>
+			Twoi uczniowie
+		</h4>
+	</div>
+	
+	<div class="card-body">
+		
+		<c:choose>
+			<c:when test="${empty studentList}">
+				<!-- Ta karta mogłaby pojawiać się, jeżeli nie ma klas ani uczniów -->
+				<div class="alert alert-info alert-dismissible p-0">
+					<div class="card-header">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
+						</button>
+						<h4 class="m-0">
+							<i class="nav-icon fas fa-info-circle"></i>
+							Informacja
+						</h4>
+					</div>
+					<div class="card-body">
+						<p class="card-text">
+							Nie masz jeszcze dodanych żadnych uczniów.<br>
+							Wybierz czynność z rozwijanego menu po lewej stronie, aby dodać i
+							skonfigurować uczniów.
+						</p>
+					</div>
+				</div>
+			</c:when>
+			<c:otherwise>
+				<c:forEach items="${studentList}" var="student">
+					<div class="card card-secondary collapsed-card shadow">
+						<div class="card-header bg-indigo">
+							<h3 class="card-title">
+									
+									${student.firstName} ${student.lastName}
+							</h3>
+							
+							<div class="card-tools">
+								<button type="button" class="btn btn-tool" data-card-widget="collapse">
+									<i class="fas fa-plus"></i>
+								</button>
+
+							</div>
+							<!-- /.card-tools -->
+						</div>
+						<!-- /.card-header -->
+						<div class="card-body">
+							Tutaj będzie reszta
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+				</c:forEach>
+			</c:otherwise>
+		</c:choose>
+	</div>
+</div>

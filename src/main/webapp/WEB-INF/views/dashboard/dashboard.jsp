@@ -35,57 +35,11 @@
 					<div class="col-lg-6">
 						
 						<!-- column nr 1 -->
-						<h4 class="my-3">
-							<i class="nav-icon fas fa-chalkboard"></i>
-							Twoje klasy
-						</h4>
-						
-						<c:choose>
-							<c:when test="${empty classroomList}">
-								<div class="alert alert-info alert-dismissible p-0 shadow">
-									<div class="card-header">
-										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
-										</button>
-										<h4 class="m-0">
-											<i class="nav-icon fas fa-info-circle"></i>
-											Informacja
-										</h4>
-									</div>
-									<div class="card-body">
-										<p class="card-text">
-											Nie masz jeszcze dodanych żadnych klas.<br>
-											Wybierz czynność z rozwijanego menu po lewej stronie, aby dodać i
-											skonfigurować klasę.
-										</p>
-									</div>
-								</div>
-							</c:when>
-							<c:otherwise>
-								<c:forEach items="${classroomList}" var="classRoom">
-									<div class="card card-secondary collapsed-card shadow">
-										<div class="card-header">
-											<h3 class="card-title">
-												
-												Klasa ${classRoom.classroomName}
-											</h3>
-											
-											<div class="card-tools">
-												<button type="button" class="btn btn-tool" data-card-widget="collapse">
-													<i class="fas fa-plus"></i>
-												</button>
-											</div>
-											<!-- /.card-tools -->
-										</div>
-										<!-- /.card-header -->
-										<div class="card-body">
-											Tutaj będzie reszta
-										</div>
-										<!-- /.card-body -->
-									</div>
-									<!-- /.card -->
-								</c:forEach>
-							</c:otherwise>
-						</c:choose>
+						<!-- list of classrooms card -->
+						<%@include file="classroomList.jspf"%>
+
+						<!-- list of subjects card -->
+						<%@include file="subjectList.jspf"%>
 					
 					</div>
 					<!-- /.col-lg-6 -->
@@ -93,60 +47,9 @@
 					<div class="col-lg-6">
 						
 						<!-- column nr 2 -->
-						<h4 class="my-3">
-							<i class="nav-icon fas fa-user-graduate"></i>
-							Twoi uczniowie
-						</h4>
+						<!-- list of students card -->
+						<%@include file="studentList.jspf"%>
 						
-						<c:choose>
-							<c:when test="${empty studentList}">
-								<!-- Ta karta mogłaby pojawiać się, jeżeli nie ma klas ani uczniów -->
-								<div class="alert alert-info alert-dismissible p-0 shadow">
-									<div class="card-header">
-										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
-										</button>
-										<h4 class="m-0">
-											<i class="nav-icon fas fa-info-circle"></i>
-											Informacja
-										</h4>
-									</div>
-									<div class="card-body">
-										<p class="card-text">
-											Nie masz jeszcze dodanych żadnych uczniów.<br>
-											Wybierz czynność z rozwijanego menu po lewej stronie, aby dodać i
-											skonfigurować uczniów.
-										</p>
-									</div>
-								</div>
-							</c:when>
-							<c:otherwise>
-								<c:forEach items="${studentList}" var="student">
-									<div class="card card-secondary collapsed-card shadow">
-										<div class="card-header">
-											<h3 class="card-title">
-													
-													${student.firstName} ${student.lastName}
-											</h3>
-											
-											<div class="card-tools">
-												<button type="button" class="btn btn-tool" data-card-widget="collapse">
-													<i class="fas fa-plus"></i>
-												</button>
-											</div>
-											<!-- /.card-tools -->
-										</div>
-										<!-- /.card-header -->
-										<div class="card-body">
-											Tutaj będzie reszta
-										</div>
-										<!-- /.card-body -->
-									</div>
-									<!-- /.card -->
-								</c:forEach>
-							</c:otherwise>
-						</c:choose>
-					
-					
 					</div>
 					<!-- /.col-lg-6 -->
 				</div>
