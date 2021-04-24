@@ -79,8 +79,16 @@
 						</p>
 					</a>
 					<ul class="nav nav-treeview">
+						<c:forEach items="${stringSubjectList}" var="subject">
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fas fa-minus nav-icon"></i>
+									<p>${subject}</p>
+								</a>
+							</li>
+						</c:forEach>
 						<li class="nav-item">
-							<a href="#" class="nav-link">
+							<a href="/addSubject/${teacher.id}" class="nav-link">
 								<i class="fas fa-plus-circle nav-icon"></i>
 								<p>Dodaj przedmiot</p>
 							</a>

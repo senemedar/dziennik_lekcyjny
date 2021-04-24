@@ -10,7 +10,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <div class="card card-danger shadow mt-2">
-	<div class="card-header">
+	<div class="card-header pb-0">
 		<h4>
 			<i class="nav-icon fas fa-user-graduate"></i>
 			Twoi uczniowie

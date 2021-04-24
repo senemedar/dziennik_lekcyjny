@@ -11,7 +11,7 @@
 
 <!-- classroom list -->
 <div class="card card-secondary shadow mt-2">
-	<div class="card-header">
+	<div class="card-header pb-0">
 		<h4>
 			<i class="nav-icon fas fa-chalkboard"></i>
 			Twoje klasy

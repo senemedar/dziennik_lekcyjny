@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import teamfp.dziennik.model.User;
 import teamfp.dziennik.service.ClassroomService;
 import teamfp.dziennik.service.StudentService;
 import teamfp.dziennik.service.TeacherService;
@@ -27,7 +28,7 @@ public class StudentController {
 		model.addAttribute("studentList", studentService.getStudentList());
 		model.addAttribute("classroomList", classroomService.getClassroomList());
 //		model.addAttribute("classroomList", new ArrayList<>());
-		model.addAttribute("password", studentService.generatePassword(5));
+		model.addAttribute("password", User.generatePassword(8));
 
 		return "/student/studentRegistration";
 	}
