@@ -40,13 +40,7 @@ public class DashboardController {
 			model.addAttribute("teacher", teacher);
 			model.addAttribute("classroomList", classroomService.getClassroomList());
 			model.addAttribute("studentList", studentService.getStudentList());
-			model.addAttribute("subjectList", subjectService.getSubjectList(teacher));
-
-			List<Subject> list = subjectService.getSubjectList();
-			for (Subject subject : list) {
-				System.out.println(subject.getTeacher());
-
-			}
+			model.addAttribute("subjectList", teacherService.getSubjectList(teacher));
 
 			return "dashboard/dashboard";
 		}

@@ -42,7 +42,7 @@
 			<c:otherwise>
 				<c:forEach items="${subjectList}" var="subject">
 					<div class="card collapsed-card">
-						<div class="card-header bg-olive">
+						<div class="card-header bg-olive cursor-pointer" data-card-widget="collapse">
 							<h3 class="card-title">
 								
 								${subject.subjectName}

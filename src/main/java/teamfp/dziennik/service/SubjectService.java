@@ -36,15 +36,17 @@ public class SubjectService {
     }
 
 	public List<Subject> getSubjectList(Teacher teacher) {
-		List<Subject> returnList = new ArrayList<>();
-		List<Subject> allSubjects = subjectRepository.findAll();
-		for (Subject subject : allSubjects) {
-			if (subject.getTeacher().getId().equals(teacher.getId())) {
-				returnList.add(subject);
-			}
-		}
+//		List<Subject> returnList = new ArrayList<>();
+//
+//		for (Subject subject : subjectRepository.findAll()) {
+//			if (subject.getTeacher().getId().equals(teacher.getId())) {
+//				returnList.add(subject);
+//			}
+//		}
+//
+//		return returnList;
 
-		return returnList;
+		return teacher.getSubjectList();
 	}
 
 	public List<String> getSubjectNames() {

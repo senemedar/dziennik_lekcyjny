@@ -64,4 +64,8 @@ public class TeacherService {
 
 		return subjectList;
 	}
+
+	public List<Subject> getSubjectList(Teacher teacher) {
+    	return teacher.getSubjectList();
+	}
 }
