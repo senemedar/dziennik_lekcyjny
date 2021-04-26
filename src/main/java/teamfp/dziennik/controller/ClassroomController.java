@@ -1,6 +1,5 @@
 package teamfp.dziennik.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,12 +10,10 @@ import org.springframework.web.servlet.view.RedirectView;
 import teamfp.dziennik.model.Classroom;
 import teamfp.dziennik.model.Student;
 import teamfp.dziennik.model.Teacher;
-import teamfp.dziennik.repository.ClassroomRepository;
 import teamfp.dziennik.service.ClassroomService;
 import teamfp.dziennik.service.StudentService;
 import teamfp.dziennik.service.TeacherService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -36,7 +33,7 @@ public class ClassroomController {
 
 		Teacher teacher = teacherService.getTeacher(Long.parseLong(id));
 		List<Teacher> teacherList = teacherService.getTeachersList();
-		List<Student> studentList = studentService.getStudentsList();
+		List<Student> studentList = studentService.getStudentList();
 
 		model.addAttribute(teacher);
 		model.addAttribute(teacherList);
@@ -46,8 +43,15 @@ public class ClassroomController {
 	}
 
 	@PostMapping(value = {"/addClassroom/{id}"})
-	public RedirectView postSaveClassroom(@ModelAttribute Classroom newClassroom, @PathVariable String id) {
+	public RedirectView postSaveClassroom(@ModelAttribute Classroom newClassroom, @PathVariable Long id) {
+		Teacher teacher = teacherService.getTeacher(id);
+		newClassroom.setTeacher(teacher);
 		classroomService.saveClassroom(newClassroom);
+
+		List<Classroom> classroomList = teacher.getClassroomList();
+		classroomList.add(newClassroom);
+		teacher.setClassroomList(classroomList);
+//		teacherService.editTeacher(teacher, id);
 
 		return new RedirectView("/dashboard/" + id);
 	}

@@ -79,8 +79,20 @@
 						</p>
 					</a>
 					<ul class="nav nav-treeview">
+						<c:choose>
+							<c:when test="${!empty subjectList}">
+								<c:forEach items="${subjectList}" var="subject">
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="fas fa-minus nav-icon"></i>
+											<p>${subject.subjectName}</p>
+										</a>
+									</li>
+								</c:forEach>
+							</c:when>
+						</c:choose>
 						<li class="nav-item">
-							<a href="#" class="nav-link">
+							<a href="/addSubject/${teacher.id}" class="nav-link">
 								<i class="fas fa-plus-circle nav-icon"></i>
 								<p>Dodaj przedmiot</p>
 							</a>

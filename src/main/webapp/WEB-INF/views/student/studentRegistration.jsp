@@ -28,10 +28,10 @@
 					<div class="col-lg-6">
 						
 						<!-- column nr 1 -->
-						<div class="card card-danger mt-2 shadow">
+						<div class="card card-primary mt-2 shadow">
 							<form id="addClassroom" action="${pageContext.request.contextPath}/registerStudent"
 								  method="post">
-								<div class="card-header">
+								<div class="card-header bg-danger">
 									<h3 class="card-title">Rejestracja nowego ucznia</h3>
 								</div>
 								
@@ -172,14 +172,9 @@
 				</div>
 			
 			</div>
-			<!-- /.col-lg-6 -->
 		</div>
-		<!-- /.row -->
-	</div><!-- /.container-fluid -->
+	</div>
 </div>
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
 
 <!-- Main Footer -->
 <footer class="main-footer">
@@ -192,7 +187,7 @@
 	rights reserved.
 </footer>
 
-</div>
+<%--</div>--%>
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
@@ -200,7 +195,7 @@
 <script>
 
     for (let i = 1; i < 4; i++) {
-        tooltip = new bootstrap.Tooltip(document.getElementById('tip' + i, {
+        new bootstrap.Tooltip(document.getElementById('tip' + i, {
             animation: true
         }))
     }

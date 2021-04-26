@@ -1,6 +1,16 @@
 package teamfp.dziennik.model.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public enum SubjectName {
-    Historia,
-    Angielski,
+    Historia("Historia"),
+    Angielski("Język Angielski"),
+	polski("Język Polski"),
+    matematyka("Matematyka");
+
+	private String subjectName;
+
 }
