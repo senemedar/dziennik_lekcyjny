@@ -28,7 +28,7 @@ public class TeacherController {
 	@GetMapping(value = {"/teacherRegistration"})
 	public String registerTeacher(Model model) {
 		model.addAttribute("password", User.generatePassword(12));
-		model.addAttribute("subjectList", subjectService.getSubjectNames());
+		model.addAttribute("subjectNamesList", subjectService.getSubjectNames());
 
 		return "teachers/registerTeacher";
 	}

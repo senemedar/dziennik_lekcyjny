@@ -8,7 +8,8 @@ import lombok.Getter;
 public enum SubjectName {
     Historia("Historia"),
     Angielski("Język Angielski"),
-	polski("Język Polski");
+	polski("Język Polski"),
+    matematyka("Matematyka");
 
 	private String subjectName;
 

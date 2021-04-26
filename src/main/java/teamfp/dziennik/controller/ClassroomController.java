@@ -43,8 +43,15 @@ public class ClassroomController {
 	}
 
 	@PostMapping(value = {"/addClassroom/{id}"})
-	public RedirectView postSaveClassroom(@ModelAttribute Classroom newClassroom, @PathVariable String id) {
+	public RedirectView postSaveClassroom(@ModelAttribute Classroom newClassroom, @PathVariable Long id) {
+		Teacher teacher = teacherService.getTeacher(id);
+		newClassroom.setTeacher(teacher);
 		classroomService.saveClassroom(newClassroom);
+
+		List<Classroom> classroomList = teacher.getClassroomList();
+		classroomList.add(newClassroom);
+		teacher.setClassroomList(classroomList);
+//		teacherService.editTeacher(teacher, id);
 
 		return new RedirectView("/dashboard/" + id);
 	}

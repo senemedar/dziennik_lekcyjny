@@ -22,7 +22,7 @@ public class StudentController {
 	}
 
 
-	@GetMapping(value = {"/addStudent/{teacherId}"})
+	@GetMapping(value = {"/registerStudent/{teacherId}"})
 	public String registerNewTeacher(Model model, @PathVariable String teacherId) {
 		model.addAttribute("teacher", teacherService.getTeacher(Long.parseLong(teacherId)));
 		model.addAttribute("studentList", studentService.getStudentList());

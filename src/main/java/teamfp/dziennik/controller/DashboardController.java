@@ -38,9 +38,10 @@ public class DashboardController {
 		} else {
 			model.addAttribute("teacherList", teacherService.getTeachersList());
 			model.addAttribute("teacher", teacher);
-			model.addAttribute("classroomList", classroomService.getClassroomList());
+			model.addAttribute("classroomList", teacher.getClassroomList());
 			model.addAttribute("studentList", studentService.getStudentList());
-			model.addAttribute("subjectList", teacherService.getSubjectList(teacher));
+//			model.addAttribute("subjectList", teacherService.getSubjectList(teacher));
+			model.addAttribute("subjectList", teacher.getSubjectList());
 
 			return "dashboard/dashboard";
 		}

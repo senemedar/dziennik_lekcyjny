@@ -102,7 +102,7 @@
 									<div class="form-group">
 										<label class="mb-0">Wybierz przedmioty których uczysz</label>
 										<select name="stringSubjectList" class="duallistbox" multiple="multiple">
-											<c:forEach items="${subjectList}" var="subject">
+											<c:forEach items="${subjectNamesList}" var="subject">
 												<option>${subject}</option>
 											</c:forEach>
 										</select>

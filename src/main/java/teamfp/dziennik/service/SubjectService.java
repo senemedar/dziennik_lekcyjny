@@ -14,7 +14,6 @@ import java.util.List;
 public class SubjectService {
 	private final SubjectRepository subjectRepository;
 
-
 	public SubjectService(SubjectRepository subjectRepository) {
 		this.subjectRepository = subjectRepository;
 	}
@@ -36,15 +35,6 @@ public class SubjectService {
     }
 
 	public List<Subject> getSubjectList(Teacher teacher) {
-//		List<Subject> returnList = new ArrayList<>();
-//
-//		for (Subject subject : subjectRepository.findAll()) {
-//			if (subject.getTeacher().getId().equals(teacher.getId())) {
-//				returnList.add(subject);
-//			}
-//		}
-//
-//		return returnList;
 
 		return teacher.getSubjectList();
 	}
