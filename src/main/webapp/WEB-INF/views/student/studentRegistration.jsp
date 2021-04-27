@@ -132,18 +132,18 @@
 									
 									<!-- subject choice -->
 									<div class="form-group">
-										<label class="mb-0">Wybierz zajęcia na które uczęszcza uczeń</label>
-										<select name="studentList" class="duallistbox" multiple="multiple">
+										<label for="subjectList" class="mb-0">Wybierz zajęcia na które uczęszcza uczeń</label>
+										<select id="subjectList" name="subjectList" class="duallistbox" multiple="multiple">
 											<c:choose>
-												<c:when test="${empty studentList}">
-													<option disabled>W systemie nie jest zapisany żaden uczeń.
+												<c:when test="${empty subjectList}">
+													<option disabled>Nie masz dodanych jeszcze żadnych przedmiotów.
 													</option>
-													<option disabled>Proszę dodać uczniów z menu po lewej.
+													<option disabled>Dodaj przedmiot którego uczyw w menu po lewej.
 													</option>
 												</c:when>
 												<c:otherwise>
-													<c:forEach items="${studentList}" var="student">
-														<option>${student.firstName} ${student.lastName}</option>
+													<c:forEach items="${subjectList}" var="subject">
+														<option>${subject.subjectName}</option>
 													</c:forEach>
 												</c:otherwise>
 											</c:choose>

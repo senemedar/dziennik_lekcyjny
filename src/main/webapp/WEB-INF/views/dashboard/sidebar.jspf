@@ -62,7 +62,7 @@
 					</a>
 					<ul class="nav nav-treeview">
 						<li class="nav-item">
-							<a href="/addStudent/${teacher.id}" class="nav-link">
+							<a href="/registerStudent/${teacher.id}" class="nav-link">
 								<i class="fas fa-plus-circle nav-icon"></i>
 								<p>Dodaj ucznia</p>
 							</a>
