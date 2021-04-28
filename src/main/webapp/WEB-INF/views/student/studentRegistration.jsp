@@ -40,15 +40,15 @@
 									<!-- choosing a teacher -->
 									<div class="form-group pb-2">
 										<label>Nauczyciel prowadzący</label>
-										<input type="text" name="classroomTeacher" class="form-control"
+										<input type="text" class="form-control"
 											   disabled value="${teacher.firstName} ${teacher.lastName}">
 									</div>
 									
 									<div class="row">
 										<div class="col-lg-6">
 											<div class="form-group">
-												<label>Imię</label>
-												<input type="text" name="firstName" class="form-control"
+												<label for="firstName">Imię</label>
+												<input id="firstName" type="text" name="firstName" class="form-control"
 													   placeholder="Imię ucznia" required>
 											</div>
 											
@@ -61,9 +61,9 @@
 										</div>
 										<div class="col-lg-6">
 											<div class="form-group">
-												<label for="lastName">Adres e-mail</label>
+												<label for="email">Adres e-mail</label>
 												<div class="input-group mb-3">
-													<input type="email" name="email" class="form-control"
+													<input id="email" type="email" name="email" class="form-control"
 														   placeholder="Email">
 													<div class="input-group-append">
 														<div class="input-group-text">
@@ -75,14 +75,14 @@
 											
 											
 											<div class="form-group">
-												<label>Hasło</label>
+												<label for="password">Hasło</label>
 												<i id="tip1" class="nav-icon fas fa-lg fa-info-circle"
 												   data-toggle="tooltip"
 												   data-placement="top"
 												   title="Hasło generowane automatycznie, ale może być dowolnie zmienione. Przekaż je uczniowi, aby mógł zalogować się do systemu.">
 												</i>
 												<div class="input-group mb-3">
-													<input type="text" class="form-control" value="${password}">
+													<input id="password" name="password" type="text" class="form-control" value="${password}">
 													<div id="tip2" class="input-group-append" data-toggle="tooltip"
 														 data-placement="top"
 														 title="Wyślij do ucznia e-mail z powiadomieniem o  rejestracji.">
@@ -104,7 +104,7 @@
 									</div>
 									
 									<div class="form-group">
-										<label>Wybierz klasę do której uczęszcza uczeń</label>
+										<label for="classroom">Wybierz klasę do której uczęszcza uczeń</label>
 										<c:choose>
 											<c:when test="${empty classroomList}">
 												<div class="alert alert-info">
@@ -118,7 +118,7 @@
 											</c:when>
 											<c:otherwise>
 												<div class="form-group">
-													<select class="custom-select"
+													<select id="classroom" class="custom-select"
 															data-placeholder="Wybierz klasę z listy"
 															style="width: 100%;">
 														<c:forEach items="${classroomList}" var="classroom">
@@ -132,7 +132,7 @@
 									
 									<!-- subject choice -->
 									<div class="form-group">
-										<label for="subjectList" class="mb-0">Wybierz zajęcia na które uczęszcza uczeń</label>
+										<label for="subjectList" class="mb-0">Wybierz klasę do której uczęszcza uczeń</label>
 										<select id="subjectList" name="subjectList" class="duallistbox" multiple="multiple">
 											<c:choose>
 												<c:when test="${empty subjectList}">
@@ -155,9 +155,17 @@
 								
 								<!-- card footer -->
 								<div class="modal-footer justify-content-between">
-									<button type="submit" class="btn btn-primary" style="width: 300px">
-										Zarejestruj ucznia
-									</button>
+									<div>
+										<button type="submit" class="btn btn-primary mr-4" style="width: 300px">
+											Zarejestruj ucznia
+										</button>
+										
+										<div class="custom-control custom-checkbox float-right mt-2">
+											<input class="custom-control-input" type="checkbox" id="withParent" value="optionalParent">
+											<label for="withParent" class="custom-control-label text-">Zarejestruj także rodzica</label>
+										</div>
+									</div>
+									
 									<button type="button" class="btn btn-default"
 											onclick="location.href='javascript:history.back()'">Anuluj
 									</button>
